@@ -3,6 +3,11 @@ FRC Java Training
 
 This repository is where our training files for Java are located. You can follow our guide listed above - Building a Command Robot in Java.pdf. You can find the example project from this documentation under the Examples folder.
 
+The PowerPoint from the Java presenation on basics of FRC programming is listed above as well - 018 FRC Java Presentation.pdf
+
+If you want more information on Java, you can search youtube for basics videos. One example is: https://www.youtube.com/watch?v=uWYPVz_i7W4
+
+
 We recommend setting the root of the repository up under C:\SuitsGIT\ so all of the mappings are correct. This project would then be mapped to C:\SuitsGIT\JavaTraining. This structure is required for LabView projects CTRE references.
 
 Use the GitHub desktop app to setup your folder structure.
