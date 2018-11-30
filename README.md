@@ -47,7 +47,7 @@ https://wpilib.screenstepslive.com/s/currentCS/m/getting_started/l/599670-instal
 ## Install Order ##
 1.	Install Ninite package
 2.	Reboot your computer
-3.	Configure Visual Studio Code environment
+3.	Configure Visual Studio Code environment - https://wpilib.screenstepslive.com/s/currentCS/m/79833/l/932382-installing-vs-code
 4.	Install WPILib Visual Studio Extension
 5.	(OPTIONAL) Install Cross the Road Electronics Package
 
