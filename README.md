@@ -18,8 +18,6 @@ To get an environment up and running, we recommend following these steps:
 You need to download a few things before you get started. Some packages are online packages, which make things easier.
 First, download a Ninite installer package. Go to https://ninite.com/
 Select the following out of the list
-* Web Browsers
-	* Chrome (better than IE/Edge 😉)
 * Developer Tools
 	* Notepad++
 	* JDK 8 x64
@@ -34,6 +32,8 @@ Select the following out of the list
 Click Get your Ninite when you are down. The file name should have all of the apps that you are installing.
 Go download github desktop at https://desktop.github.com/
 
+Download the latest GIT client: https://git-scm.com/downloads
+
 Next get the WPILib VS Code extension. The current release is https://github.com/wpilibsuite/vscode-wpilib/releases/tag/v2019.0.0-alpha-4
 
 CTRE Phoenix Framework
@@ -46,10 +46,37 @@ https://wpilib.screenstepslive.com/s/currentCS/m/getting_started/l/599670-instal
 
 ## Install Order ##
 1.	Install Ninite package
+2.  Install GIT package
 2.	Reboot your computer
 3.	Configure Visual Studio Code environment - https://wpilib.screenstepslive.com/s/currentCS/m/79833/l/932382-installing-vs-code
 4.	Install WPILib Visual Studio Extension
 5.	(OPTIONAL) Install Cross the Road Electronics Package
+
+You may have issues loading Java because JAVA_HOME is not set. You can set it and then reboot for it to take effect. To do this, open a command prompt as administrator on your computer and follow these commands:
+> C:\>cd "Program Files"
+> 
+> C:\Program Files>cd Java
+> 
+> C:\Program Files\Java>dir
+>  Volume in drive C has no label.
+>  Volume Serial Number is 1E7A-70B8
+> 
+>  Directory of C:\Program Files\Java
+> 
+> 07/02/2018  02:35 PM    <DIR>          .
+> 07/02/2018  02:35 PM    <DIR>          ..
+> 07/02/2018  02:36 PM    <DIR>          jdk1.8.0_172
+> 05/15/2017  01:46 PM    <DIR>          jre1.8.0_131
+> 07/02/2018  02:36 PM    <DIR>          jre1.8.0_172
+>                0 File(s)              0 bytes
+>                5 Dir(s)  54,882,783,232 bytes free
+> 
+> C:\Program Files\Java>setx JAVA_HOME "C:\Program Files\Java\jdk1.8.0_172"
+> 
+> SUCCESS: Specified value was saved.
+> 
+> C:\Program Files\Java>
+
 
 
 For 2018, if you want the drivers station, you have to install the FRC Update suite.

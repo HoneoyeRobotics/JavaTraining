@@ -12,6 +12,7 @@ import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.SpeedControllerGroup;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.robot.RobotMap;
+import frc.robot.commands.ArmImmediate;
 
 /**
  * Add your docs here.
@@ -27,7 +28,6 @@ public class Arms extends Subsystem {
     elbowMotor = new WPI_VictorSPX(RobotMap.elbowMotorCanID);
     leftArmWheelMotor = new WPI_VictorSPX(RobotMap.leftArmWheelCanID);
     rightArmWheelMotor = new WPI_VictorSPX(RobotMap.rightArmWheelCanID);    
-    rightArmWheelMotor.setInverted(true);
     armWheelMotors = new SpeedControllerGroup(leftArmWheelMotor, rightArmWheelMotor);
     armPositionLimitSwitch = new DigitalInput(RobotMap.armLimitSwitchDIO);
   }
@@ -48,7 +48,7 @@ public class Arms extends Subsystem {
       speed = 0;
     //if speed is negative, make positive as we want to run the motor up.
     if(speed < 0)
-      speed = speed * 1;
+      speed = speed * -1;
     elbowMotor.set(speed);
   }
 
@@ -66,6 +66,6 @@ public class Arms extends Subsystem {
 
   @Override
   public void initDefaultCommand() {
-    // Set the default command for a subsystem here.
+    setDefaultCommand(new ArmImmediate());
   }
 }

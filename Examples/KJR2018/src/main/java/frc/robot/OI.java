@@ -20,15 +20,19 @@ import frc.robot.commands.SpitCube;
  */
 public class OI {
 
-  public static Joystick driverJoystick = new Joystick(0); 
   public static final int driverJoystickForwardAxis = 1;  //left stick, left and right
   public static final int driverJoystickTurnLeftAxis = 2;   // left trigger
   public static final int driverJoystickTurnRightAxis = 3;   // right trigger
 
-  public static JoystickButton driverButtonA = new JoystickButton(driverJoystick, 0);
-  public static JoystickButton driverButtonB  = new JoystickButton(driverJoystick, 1);
-  public static JoystickButton driverButtonX = new JoystickButton(driverJoystick, 2);
-  public static JoystickButton driverButtonY = new JoystickButton(driverJoystick, 3);
+  public static final int armWheelAxis = 4; //right stick, x axis
+  public static final int elbowAxis = 5; //right stick, y axis
+  
+  public static Joystick driverJoystick = new Joystick(0); 
+
+  public static JoystickButton driverButtonA = new JoystickButton(driverJoystick, 1);
+  public static JoystickButton driverButtonB  = new JoystickButton(driverJoystick, 2);
+  public static JoystickButton driverButtonX = new JoystickButton(driverJoystick, 3);
+  public static JoystickButton driverButtonY = new JoystickButton(driverJoystick, 4);
 
   public OI() {    
     driverButtonA.whileHeld(new LowerArms());
