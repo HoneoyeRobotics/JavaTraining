@@ -44,7 +44,7 @@ public class Drivetrain extends Subsystem {
 
   
 	public void arcadeDrive(double xSpeed,double zRotation) {				
-		drivetrain.arcadeDrive( xSpeed, zRotation);
+		drivetrain.arcadeDrive( xSpeed * -1, zRotation);
 	}	
 	
 
