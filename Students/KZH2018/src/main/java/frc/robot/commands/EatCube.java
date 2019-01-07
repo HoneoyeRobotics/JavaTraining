@@ -10,8 +10,8 @@ package frc.robot.commands;
 import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.Robot;
 
-public class RaiseArms extends Command {
-  public RaiseArms() {
+public class EatCube extends Command {
+  public EatCube() {
     requires(Robot.arms);
     setInterruptible(true);
   }
@@ -24,7 +24,7 @@ public class RaiseArms extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    Robot.arms.runArmWheels(0.75);  
+    Robot.arms.runArmWheels(0.75);
   }
 
   // Make this return true when this Command no longer needs to run execute()
@@ -36,8 +36,8 @@ public class RaiseArms extends Command {
   // Called once after isFinished returns true
   @Override
   protected void end() {
-    Robot.arms.runArmWheels(0); 
-  }
+    Robot.arms.runArmWheels(0.00);
+ }
 
   // Called when another command which requires one or more of the same
   // subsystems is scheduled to run
